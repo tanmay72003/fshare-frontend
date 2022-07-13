@@ -1,0 +1,326 @@
+:root{
+    --main-bg-color: #24252A ;
+    --border-color: #0088a9;
+    
+
+}
+html{
+    height: 100%;
+}
+
+body {
+    font-family: system-ui;
+    background: var(--main-bg-color);   
+    padding: 0%;
+    margin: 0%;
+    height: 100%;
+}   
+
+/* taskbar styleing started */
+
+header li,a,button{
+    font-weight: 500;
+    font-size: 16px;
+    color: #edf0f1;
+    text-decoration: none;
+}
+
+.logo{
+    cursor: pointer;
+    margin-right: auto;
+
+}
+.navbar-brand{
+    object-fit: cover;
+    height: 60px;
+    
+}
+header{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 10%;
+
+}
+
+.navbar-list{
+    list-style-type: none;
+
+}
+
+.navbar-li{
+    display:inline-block;
+    padding:0% 20px;
+    cursor:pointer; 
+}
+
+.navbar-li :hover{
+ color: #0088a9;   
+
+}
+
+
+header button{
+    margin-left: 20px;
+    background-color: rgba(0, 136, 169, 1);
+    padding: 9px 25px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+header button:hover{
+    background-color: rgba(0, 136, 169, 0.7);
+}
+/* taskbar styling ended */
+
+main{
+    padding: 0%;
+    margin: 0%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 99%;
+    background-color:rgba(241,241,241,1);
+
+}
+.upload-container
+{
+    background-color: rgba(191,191,191,0.3);
+    box-shadow: 0px 20px 20px #00002e;
+    border-radius: 25px; 
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+
+}
+.upload-box{
+    height: 250px;
+    width: 500px;
+    border: dashed 3px var(--border-color);
+    border-radius: 25px;
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: all 0.2s ease;
+    cursor: pointer;
+
+}
+.uploadbox-image {
+   
+    width: 75px;
+    position: relative;
+    height :125px;
+
+}
+
+.uploadbox-image img{
+    width: 75px;
+    position: absolute;
+    transform-origin: bottom;
+    transition: transform 250ms ease-in-out;
+    
+}
+
+.uploadbox-image .center{
+    z-index: 2;
+}
+
+.dragged .uploadbox-image .right{
+    transform: rotate(12deg) translatex(20px) scale(0.9);
+    transform-origin: bottom;
+    filter: grayscale(0.5);
+
+}
+
+.dragged .uploadbox-image .left{
+    transform: rotate(-12deg) translatex(-20px) scale(0.9);
+    transform-origin: bottom;
+    filter: grayscale(0.5);
+
+}
+
+.dragged .uploadbox-image .center{
+    transform: translateY(-5px);
+}
+.dragged{
+    background: rgba(0, 136, 169, 0.3);
+}
+
+#fileinput{
+    display: none;
+}
+
+.browsebtn{
+   color: #2196f3;
+    cursor: pointer;
+}
+
+.uploadbar
+{
+    width: 500px;
+    height: 70px;
+    border: 2px solid rgba(191,191,191,0.7);
+    margin-bottom: 25px;
+    border-radius: 10px;
+    position: relative;
+    display: none;
+         
+}
+
+.uploadbar .bg-progress{
+    border-radius: 10px;
+    background-color: rgba(191,191,191,1); 
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: transform 250ms linear;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.progressbar{
+    height: 3px;
+    background-color: #0088a9;
+    width: 100%;
+    border-radius: 2px;
+    transform: scaleX(0);
+    transition: transform 250ms linear;
+    transform-origin: left;
+}
+
+
+.uploadbar .inner-container{
+    position: absolute;
+    z-index: 1;
+    margin: 10px 15px;
+    width: calc(100% - 30px);
+}
+
+
+.linkbox{
+    width: 500px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    display: none;
+}
+
+.linkbox .urlbox{
+    display: flex;
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.linkbox p{
+    text-align: center;
+    font-size: 16px;
+    opacity: 0.7;
+    margin-top: 0;
+}
+
+.linkbox .urlbox input{
+    width: 100%;
+    border: 2px solid var(--border-color);
+    border-radius: 3px;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    font-size: 18px;
+    background-color:  rgba(191,191,191,0.3);
+}
+
+.urlbox img{
+    cursor: pointer;
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    right:7px;
+    top: 12px;
+    background-color:rgba(191,191,191,1) ;
+
+}
+
+.about-Modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.8);
+    visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:100vw;
+    height : 100vh;
+    z-index: 3;
+}
+
+.modal_box{
+    background-color: #ffff;
+    width: 500px;
+    height: 250px;
+    max-width: 100%;
+    padding: 30px 40px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+
+}
+
+.modal_box button{
+        margin-left: 20px;
+        background-color: rgba(0, 136, 169, 1);
+        padding: 9px 25px;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+}
+.usage-Modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.8);
+    visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:100vw;
+    height : 100vh;
+    z-index: 3;
+}
+
+.services-Modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.8);
+    visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:100vw;
+    height : 100vh;
+    z-index: 3;
+}
+.contact-modal{ 
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.8);
+    visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:100vw;
+    height : 100vh;
+    z-index: 3;
+}
+
+.modal_box button:hover{
+    background-color: rgba(0, 136, 169, 0.7);
+
+}

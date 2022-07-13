@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="/css/sty.css">
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>file shareing system</title>
+</head>
+
+<body>
+    <header>
+        <a class="logo" href="/"><img height="80cm" width="100cm" class="navbar-brand" src="/images/android-chrome-512x512.png"
+                alt="FShare.com"></a>
+        <nav class="navbar">
+            <ul>
+                <li class="navbar-li">
+                    <a class="about_nav">About</a>
+                </li>
+                <li class="navbar-li">
+                    <a class="sevices_nav">services</a>
+                </li>
+                <li class="navbar-li">
+                    <a class="usage_nav">Usage</a>
+                </li>
+            </ul>
+        </nav>
+        <button><a class="contactbtn" href="#">Contact</a></button>
+    </header>
+    <main>
+        <section class="upload-container">
+            <div class="upload-box">
+                <div class="uploadbox-image">
+                    <img src="/images/file.svg" alt="file icon" draggable="false" class="right">
+                    <img src="/images/file.svg" alt="file icon" draggable="false" class="left">
+                    <img src="/images/file.svg" alt="file icon" draggable="false" class="center">
+                </div>
+                <input type="file" id="fileinput">
+                <div class="title">Drop the files here or, <span class="browsebtn">browse</span></div>
+            </div>
+            <div class="uploadbar">
+                <div class="bg-progress"></div>
+                <div class="inner-container">
+                    <div class="title"><span id="name">name</span>....uploading</div>
+                    <div class="percentage-container"><span id="percent">0</span>%</div>
+                    <div class="progressbar"></div>
+                </div>
+            </div>
+            <div class="linkbox">
+                <p class="expire-message">link Expires in 24 hours</p>
+                <div class="urlbox">
+                    <img src="/images/content_copy_FILL0_wght400_GRAD0_opsz48.svg" alt="copy" class="cpybtn">
+                    <input type="text" id="fileurl" readonly value = "" >
+                </div>
+            </div>
+        </section>
+        <div class="about-Modal">
+            <div class="modal_box">
+                <h1>About</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In voluptate consequuntur, dicta vitae dolor laboriosam nostrum nam velit consectetur debitis et quaerat deleniti reiciendis iusto ea obcaecati odio explicabo illo?</p>
+                <button class="about_modal_close">close</button>
+            </div>
+        </div>
+        <div class="services-Modal">
+            <div class="modal_box">
+                <h1>services</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In voluptate consequuntur, dicta vitae dolor laboriosam nostrum nam velit consectetur debitis et quaerat deleniti reiciendis iusto ea obcaecati odio explicabo illo?</p>
+                <button class="service_modal_close">close</button>
+            </div>
+        </div>
+        <div class="usage-Modal">
+            <div class="modal_box">
+                <h1>usage</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In voluptate consequuntur, dicta vitae dolor laboriosam nostrum nam velit consectetur debitis et quaerat deleniti reiciendis iusto ea obcaecati odio explicabo illo?</p>
+                <button class="usage_modal_close">close</button>
+            </div>
+        </div>
+        <div class="contact-modal">
+            <div class="modal_box">
+                <h1>contact</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quasi, facere, animi, quisquam earum debitis ad nesciunt nostrum distinctio facilis iure veniam expedita dicta eligendi beatae alias delectus aperiam ipsam?</p>
+                <button class="contact_modal_close">close</button>
+            </div>
+        </div>
+    </main>
+    <script src="/javascript/style.js"></script>
+</body>
+
+</html>
