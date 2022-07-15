@@ -1,7 +1,7 @@
 :root{
     --main-bg-color: #24252A ;
     --border-color: #0088a9;
-    
+    --container-width: 500px;
 
 }
 html{
@@ -72,6 +72,62 @@ header button{
 header button:hover{
     background-color: rgba(0, 136, 169, 0.7);
 }
+
+.menu-Button{
+    display: none;
+}
+.special-character{
+    display: none;
+}
+#navbar_li{
+   visibility: hidden;
+}
+
+@media (max-width:940px) {
+    :root{
+        --container-width:300px;
+    }
+        .special-character{
+            display: none;
+        }
+    .menu-Button{
+        display:block;
+    }
+    #navbar_li{
+        visibility: visible;
+    }
+
+    nav .navbar_list_unordered{
+        position :fixed;
+        top :0;
+        right:-100%;
+        background: var(--main-bg-color);
+        height:700%;
+        width: 30%;
+        display : flex;
+        flex-direction: column;
+        text-align: center;
+        z-index: 3;
+    }
+
+    .navbar-li{
+        margin: 40px 0;
+        font-size: 20px;
+        
+    }
+    header button{
+        margin: 0%;
+        padding: 0%;
+        background-color: var(--main-bg-color);
+    }
+
+    .navbar-li :hover{
+        color: #0088a9;  
+       
+    }
+       
+
+}    
 /* taskbar styling ended */
 
 main{
@@ -98,7 +154,7 @@ main{
 }
 .upload-box{
     height: 250px;
-    width: 500px;
+    width: var(--container-width);
     border: dashed 3px var(--border-color);
     border-radius: 25px;
     margin: 30px;
@@ -162,7 +218,7 @@ main{
 
 .uploadbar
 {
-    width: 500px;
+    width: var(--container-width);
     height: 70px;
     border: 2px solid rgba(191,191,191,0.7);
     margin-bottom: 25px;
@@ -204,7 +260,7 @@ main{
 
 
 .linkbox{
-    width: 500px;
+    width: var(--container-width);
     margin-bottom: 10px;
     border-radius: 10px;
     display: none;
@@ -261,7 +317,7 @@ main{
 
 .modal_box{
     background-color: #ffff;
-    width: 500px;
+    width: var(--container-width);
     height: 250px;
     max-width: 100%;
     padding: 30px 40px;

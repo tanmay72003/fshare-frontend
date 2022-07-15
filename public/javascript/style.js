@@ -21,6 +21,9 @@ const usageModalBox = document.querySelector('.usage-Modal');
 const servicesModalBox = document.querySelector('.services-Modal');
 const contactmodal = document.querySelector('.contact-modal');
 
+const menubtn = document.querySelector(".menu-Button");
+const menulist = document.querySelector(".navbar_list_unordered");
+
 
 
 
@@ -103,7 +106,13 @@ document.querySelector('.service_modal_close').addEventListener("click" , () => 
 document.querySelector('.contact_modal_close').addEventListener("click" , () => {
   contactmodal.style.visibility = "hidden";
 });
+menubtn.addEventListener('click', ()=> {
+menulist.style.right = 0;
+});
 
+document.querySelector('.close-button').addEventListener('click',()=>{
+  menulist.style.right = "-100%";
+});
 
 const uploadFile = () => {
   console.log("file added uploading");
